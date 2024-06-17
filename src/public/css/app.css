@@ -1,0 +1,33 @@
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.header__inner {
+    overflow: hidden;
+    /* display: inline-block; */
+}
+.header__logo{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin: 30px auto 30px 30px;
+    /* display: inline; */
+}
+.header__link{
+    /* display: inline-block; */
+}
+.header__link-button{
+    text-decoration: none;
+    color: black;
+}
+.footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__small{
+    
+}

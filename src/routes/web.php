@@ -16,7 +16,6 @@ use App\Http\Controllers\AttendanceController;
 |
 */
 Route::middleware('auth')->group(function () {
-    // 
     Route::get('/', [RegisteredUserController::class, 'stamp']);
     
     Route::post('/start', [RegisteredUserController::class, 'start']);
@@ -25,10 +24,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/end', [RegisteredUserController::class, 'end']);
 
     Route::get('/attendance', [AttendanceController::class,'index'])->name('attendance');
-    Route::get('/return', [AttendanceController::class,'return']);
-    // Route::get('/return', [AttendanceController::class,'return_get']);
-    //Route::post('/return', [AttendanceController::class,'return']);
-    Route::get('/advance', [AttendanceController::class,'advance']);
 });
 
 

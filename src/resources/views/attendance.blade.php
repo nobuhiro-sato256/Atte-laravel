@@ -18,14 +18,14 @@
 
 <div class="attendance">
     <div class="attendance__time">
-        <form action="return" method="get">
+        <form action="attendance" method="get">
         @csrf
-            <button type="submit" name="return" value="{{ $date }}"><</button>
+            <button type="submit" name="date" value="{{ $yesterday }}"><</button>
         </form>
         <p>{{ $date }}</p>
-        <form action="advance" method="get">
+        <form action="attendance" method="get">
         @csrf
-            <button type="submit" name="advance" value="{{ $date }}">></button>
+            <button type="submit" name="date" value="{{ $tomorrow }}">></button>
         </form>
     </div>
     <div class="attendance__record">
@@ -48,7 +48,8 @@
             @endforeach
         </table>
     </div>
-    {{ $records->appends(['today' => $date])->links() }}
+    {{ $records->appends(['date' => $date])->links() }}
+    </script>
 </div>
 
 @endsection

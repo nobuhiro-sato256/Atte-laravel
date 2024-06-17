@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.register__screen {
+    background: #e9ebec;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.register__screen-title {
+    text-align: center;
+    overflow: hidden;
+}
+
+.register__screen-heading {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.register__input-item{
+    background-color: #e9ebec;
+    width: 300px;
+    height: 13px;
+    padding: 10px;
+    border: none;
+    outline: solid 2px #A9A9A9;
+    border-radius: 2px;
+}
+.register__input-item::placeholder{
+    color:#A9A9A9;
+    font-size: 13px;
+
+}
+.register__input-form {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.register__input-bottan{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register__input-member {
+    width: 300px;
+    height: 40px;
+    border-radius:  5px;
+    background: blue;
+    color: white;
+    border: none;
+}
+
+.register__screen-register {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.register__screen-paragraph {
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: #A9A9A9;
+}
+
+.register__screen-anchor {
+    color: blue;
+    font-size: 15px;
+}

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atte login</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     @yield('css')
 </head>
 
@@ -20,12 +22,12 @@
         @if (Auth::check())
         <div class="header__link">
             <nav class="header__link-nav">
-                <ul>
-                    <li><a class="heder__link-button" href="/">ホーム</a></li>
-                    <li><button type=“button” onclick="location.href='{{ route('attendance') }}'">日付一覧</button></li>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item border-0"><a class="header__link-button " href="/">ホーム</a></li>
+                    <li class="list-group-item border-0"><a class="header__link-button" href="{{ route('attendance') }}">日付一覧</a></li>
                     <form class="header__form" action="/logout" method="post">
                     @csrf
-                    <li><button class="heder__link-button">ログアウト</button></li>
+                    <li class="list-group-item border-0"><a class="header__link-button" href="/">ログアウト</a></li>
                     </form>
                 </ul>
             </nav>
@@ -37,8 +39,8 @@
         @yield('content')
     </main>
 
-    <footer>
-        <small>
+    <footer class="footer">
+        <small class="footer__small">
             Atte,inc.
         </small>
     </footer>

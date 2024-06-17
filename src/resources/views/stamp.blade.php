@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/stamp.css') }}" />
+@endsection
+
 @section('content')
 
 <div class="stamp">
@@ -10,11 +14,9 @@
             <div class="stamp__button-start">
                 <form class="stamp_form" action="/start" method="post">
                 @csrf
-                @empty($user_id)
-                    <button type="submit" name="start_time"  >勤務開始</button>
-                @else
-                    <button type="submit" name="start_time" disabled >勤務開始</button>
-                @endempty
+                @if(empty($times_id)&&empty($break_time_id))
+                    <button type="submit" name="start_time"  >勤務開始</button>@else
+                    <button type="submit" name="start_time" disabled >勤務開始</button>@endif
                 </form>
 
                 <form class="stamp_form" action="/end" method="post">

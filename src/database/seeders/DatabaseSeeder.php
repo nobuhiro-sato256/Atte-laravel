@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         //     UserSeeder::class,
         // ]);
         
-        $user = User::factory(50)->has(Time::factory()->count(3))->create();
+        $user = User::factory(50)->has(Time::factory()->count(100))->create();
         //50個のUserダミーデータと３個のTimeダミーデータ作成
         
     }

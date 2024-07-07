@@ -27,7 +27,7 @@
                     <li class="list-group-item border-0"><a class="header__link-button" href="{{ route('attendance') }}">日付一覧</a></li>
                     <form class="header__form" action="/logout" method="post">
                     @csrf
-                    <li class="list-group-item border-0"><a class="header__link-button" href="/">ログアウト</a></li>
+                    <li class="list-group-item border-0"><input type="submit" class="" >ログアウト</input></li>
                     </form>
                 </ul>
             </nav>

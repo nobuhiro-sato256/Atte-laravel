@@ -69,9 +69,13 @@ class RegisteredUserController extends Controller
     public function end(Request $request)
     {
         $time_id = $request->input('end_time');
+        // タイムテーブルからidに適合したレコードを抜き出す
         $record = Time::where('id',$time_id)->get();
+        // 抜き出したレコードからstart_timeの値を取り出す
         $start_time = new Carbon($record[0]['start_time']);
+        // 勤務終了時間を取得
         $end_time = new Carbon();
+        // 勤務時間を割り出すため、勤務開始と勤務終了時間を計算する
         $work_time = $start_time->diffInSeconds($end_time);
         $hours = floor($work_time / 3600);
         $minutes = floor(($work_time % 3600) / 60);

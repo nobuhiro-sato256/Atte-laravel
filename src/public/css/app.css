@@ -19,6 +19,8 @@
     /* display: inline-block; */
 }
 .header__link-button{
+    border: none;
+    background: transparent;
     text-decoration: none;
     color: black;
 }
